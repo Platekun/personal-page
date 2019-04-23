@@ -1,8 +1,23 @@
 module.exports = {
   siteMetadata: {
     title: 'Carlos Lobo',
-    description: `Carlos Camilo Lobo's Personal Web Page`,
-    author: '@_CamiloLobo'
+    description: `This is Carlos Camilo's Personal Web Page`,
+    author: 'Carlos Camilo Lobo Ulloque',
+    twitterCreator: '@_CamiloLobo',
+    lang: 'en',
+    keywords: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'Sketch',
+      'Computer Science',
+      'Developer',
+      'Software',
+      'React',
+      'UI',
+      'Front-End',
+      'Back-End'
+    ]
   },
   plugins: [
     'gatsby-plugin-emotion',
