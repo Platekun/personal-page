@@ -3,19 +3,26 @@ import useWindowScroll from 'react-use/lib/useWindowScroll';
 import useWindowSize from 'react-use/lib/useWindowSize';
 
 import { NavigationDrawerContext } from '../@contexts';
+import { COLORS } from '../../@theme';
 import { MobileAppBarLayout, HamburgerIcon, IconButton } from '../@atoms';
 
 export function AppBar() {
-  const { toggleNavigationDrawer } = React.useContext(NavigationDrawerContext);
+  const { openDrawer } = React.useContext(NavigationDrawerContext);
   const { height } = useWindowSize();
   const { y } = useWindowScroll();
 
-  const appBarBackground = height / y < 1.5 ? 'white' : 'transparent';
-  const hamburgerIconColor = height / y < 1.5 ? 'normal' : 'inverted';
+  const threshold = height / y < 1.5;
+
+  const appBarBackground = threshold ? 'white' : 'transparent';
+  const appBarBorderColor = threshold ? COLORS.GRAY : null;
+  const hamburgerIconColor = threshold ? 'normal' : 'inverted';
 
   return (
-    <MobileAppBarLayout backgroundColor={appBarBackground}>
-      <IconButton onClick={toggleNavigationDrawer}>
+    <MobileAppBarLayout
+      backgroundColor={appBarBackground}
+      borderBottom={appBarBorderColor}
+    >
+      <IconButton onClick={openDrawer}>
         <HamburgerIcon type={hamburgerIconColor} />
       </IconButton>
     </MobileAppBarLayout>

@@ -9,34 +9,44 @@ import { LINKS } from '../../constants';
 export function NavigationDrawer() {
   const { current, closeDrawer } = React.useContext(NavigationDrawerContext);
 
+  const isVisible = current === 'visible';
+
+  const drawerContent = (
+    <>
+      <NavDrawer.HamburgerContainer>
+        <IconButton onClick={closeDrawer}>
+          <HamburgerIcon type="normal" />
+        </IconButton>
+      </NavDrawer.HamburgerContainer>
+
+      <Nav.List align="vertical">
+        {LINKS.map((link, idx) => (
+          <Nav.ListItem
+            key={cuid()}
+            size={LINKS.length}
+            idx={idx}
+            align="vertical"
+          >
+            <Nav.Link href={link.url} onClick={closeDrawer}>
+              {link.label}
+            </Nav.Link>
+          </Nav.ListItem>
+        ))}
+      </Nav.List>
+    </>
+  );
+
   return (
     <>
-      <ClickOutside onClickOut={closeDrawer}>
-        <NavDrawer.DrawerContainer visible={current === 'visible'}>
-          <NavDrawer.HamburgerContainer>
-            <IconButton onClick={closeDrawer}>
-              <HamburgerIcon type="normal" />
-            </IconButton>
-          </NavDrawer.HamburgerContainer>
+      <NavDrawer.DrawerContainer visible={isVisible}>
+        {isVisible ? (
+          <ClickOutside onClickOut={closeDrawer}>{drawerContent}</ClickOutside>
+        ) : (
+          drawerContent
+        )}
+      </NavDrawer.DrawerContainer>
 
-          <Nav.List align="vertical">
-            {LINKS.map((link, idx) => (
-              <Nav.ListItem
-                key={cuid()}
-                size={LINKS.length}
-                idx={idx}
-                align="vertical"
-              >
-                <Nav.Link to={link.url} onClick={closeDrawer} smooth>
-                  {link.label}
-                </Nav.Link>
-              </Nav.ListItem>
-            ))}
-          </Nav.List>
-        </NavDrawer.DrawerContainer>
-      </ClickOutside>
-
-      {current === 'visible' && <NavDrawer.DrawerOverlay />}
+      {isVisible && <NavDrawer.DrawerOverlay />}
     </>
   );
 }

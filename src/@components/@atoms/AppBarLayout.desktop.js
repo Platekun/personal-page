@@ -4,6 +4,9 @@ import { COLORS, zIndex } from '../../@theme';
 
 export const DesktopAppBarLayout = styled.header`
   background-color: ${COLORS.WHITE};
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: ${COLORS.GRAY};
   width: 100%;
   height: 60px;
   position: fixed;

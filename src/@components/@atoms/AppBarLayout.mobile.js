@@ -15,13 +15,18 @@ export const MobileAppBarLayout = styled.div`
   left: 0;
   right: 0;
   z-index: ${zIndex.NAVIGATION};
-  transition: ease-in 0.3s background-color;
+  transition: ease-in 0.3s background-color, ease-in 0.3s border-bottom-color;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: ${({ borderBottom }) => borderBottom ? borderBottom : 'transparent'};
 `;
 
 MobileAppBarLayout.defaultProps = {
-  backgroundColor: 'transparent'
+  backgroundColor: 'transparent',
+  borderBottom: 'transparent'
 };
 
 MobileAppBarLayout.propTypes = {
-  backgroundColor: PropTypes.string
+  backgroundColor: PropTypes.string,
+  borderBottom: PropTypes.string
 };

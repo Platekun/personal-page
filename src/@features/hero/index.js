@@ -7,11 +7,11 @@ import { MobileHero } from './Hero.mobile';
 export function Hero() {
   return (
     <>
-      <MediaQuery query="(max-width: 939px)">
+      <MediaQuery maxWidth={939}>
         <MobileHero />
       </MediaQuery>
 
-      <MediaQuery query="(min-width: 940px)">
+      <MediaQuery minWidth={940}>
         <DesktopHero />
       </MediaQuery>
     </>

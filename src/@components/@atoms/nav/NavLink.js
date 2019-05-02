@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
-import { NavHashLink as HashLink } from 'react-router-hash-link';
+import PropTypes from 'prop-types';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { space, COLORS } from '../../../@theme';
 
-export const Link = styled(HashLink)`
+export const Link = styled(AnchorLink)`
   font-weight: bold;
   text-decoration: none;
   transition: ease 0.3s color;
@@ -20,3 +21,13 @@ export const Link = styled(HashLink)`
     font-size: ${space(6)}px;
   }
 `;
+
+// Note: 69px is the current app bar height on mobile.
+// Change accordingly
+Link.defaultProps = {
+  offset: '69'
+};
+
+Link.propTypes = {
+  offset: PropTypes.string
+};

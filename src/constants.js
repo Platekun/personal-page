@@ -1,22 +1,22 @@
 export const LINKS = [
   {
     label: 'Top',
-    url: '/#top'
+    url: '#top'
   },
   {
     label: 'About',
-    url: '/#about'
+    url: '#about-me'
   },
   {
     label: 'Exp.',
-    url: '/#experience'
+    url: '#experience'
   },
   {
     label: 'Skills',
-    url: '/#skills'
+    url: '#skills'
   },
   {
     label: 'Contact',
-    url: '/#contact'
+    url: '#contact'
   }
 ];

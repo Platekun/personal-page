@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 export const List = styled.ul`
   width: inherit;
-  padding-left: 0;
   display: flex;
 
   ${({ align }) => {

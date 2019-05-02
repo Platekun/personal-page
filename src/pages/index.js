@@ -1,13 +1,14 @@
 import React from 'react';
 
-import { SEO, Layout, Hero } from '../@features';
+import { SEO, Layout, Hero, AboutMe } from '../@features';
 
 export default function IndexPage() {
   return (
     <Layout>
-      <SEO lang="en" />
+      <SEO />
 
       <Hero />
+      <AboutMe />
     </Layout>
   );
 }

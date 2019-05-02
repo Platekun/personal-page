@@ -1,8 +1,5 @@
 import styled from '@emotion/styled';
 
-import { space } from '../../../@theme';
+import { Section } from '../Section';
 
-export const ValuesSection = styled.section`
-  padding: ${space(9)}px ${space(8)}px;
-  height: 45vh;
-`;
+export const ValuesSection = styled(Section)``;

@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 
+import { breakpoints } from '../../../@theme';
+
 export const CoreValues = styled.div`
   height: 100%;
   display: flex;
@@ -9,19 +11,15 @@ export const CoreValues = styled.div`
   max-width: 348px;
   margin: 0 auto;
 
-  @media screen and (min-width: 768px) {
+  ${breakpoints.md.up} {
     max-width: 50%;
   }
 
-  @media screen and (min-width: 940px) {
+  ${breakpoints.lg.up} {
     height: unset;
     margin: unset;
     max-width: unset;
     width: 100%;
     display: block;
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translateX(-50%);
   }
 `;

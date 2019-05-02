@@ -1,11 +1,16 @@
 import React from 'react';
 
-import { LoveIcon, ScrollIcon, Hero } from '../../@components/@atoms';
+import {
+  LoveIcon,
+  ScrollIcon,
+  Important,
+  Hero
+} from '../../@components/@atoms';
 
 export function MobileHero() {
   return (
     <>
-      <Hero.MobileSection>
+      <Hero.MobileSection id="top">
         <Hero.Greeting>
           Hello, <br /> <br />
           <Hero.MyName>I am Carlos</Hero.MyName>
@@ -18,13 +23,13 @@ export function MobileHero() {
         </Hero.CallToAction>
       </Hero.MobileSection>
 
-      <Hero.ValuesSection>
+      <Hero.ValuesSection id="values">
         <Hero.CoreValues>
           <LoveIcon />
 
           <Hero.LoveValue>
             <Hero.Subtitle>
-              I <Hero.Love>love</Hero.Love> developing user interfaces
+              I <Important>love</Important> developing user interfaces
             </Hero.Subtitle>
           </Hero.LoveValue>
 

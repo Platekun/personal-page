@@ -3,8 +3,18 @@ import { css } from '@emotion/core';
 import { COLORS } from './colors';
 
 export const customStyles = css`
+  html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
   ul {
-    padding-left: none;
+    padding-left: 0;
   }
 
   li {
