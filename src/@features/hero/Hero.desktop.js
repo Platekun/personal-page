@@ -6,7 +6,7 @@ import { LoveIcon, Important, Hero } from '../../@components/@atoms';
 export function DesktopHero() {
   return (
     <>
-      <Hero.DesktopSection id="top">
+      <Hero.SectionLayout id="top">
         <Hero.DesktopSectionHighlight>
           <Hero.DesktopIllustrationContainer>
             <Hero.Illustration />
@@ -41,7 +41,7 @@ export function DesktopHero() {
             Making people’s lives better through software is my goal
           </Hero.Subtitle>
         </Hero.CoreValues>
-      </Hero.DesktopSection>
+      </Hero.SectionLayout>
     </>
   );
 }

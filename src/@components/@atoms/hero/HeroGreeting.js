@@ -14,34 +14,33 @@ export const Greeting = styled.h1`
     maxWidth ? `max-width: ${maxWidth}px` : 'max-width: auto'};
   position: relative;
 
-  ${breakpoints.md.up} {
+  ${breakpoints.md} {
     font-size: ${space(8)}px;
   }
 
-  ${breakpoints.lg.up} {
+  ${breakpoints.lg} {
     font-size: ${space(8)}px;
   }
 
-  ${breakpoints.xl.up} {
+  ${breakpoints.xl} {
     font-size: ${space(10)}px;
   }
 
-  ${breakpoints.uw.up} {
+  ${breakpoints.uw} {
     font-size: ${space(12)}px;
   }
 
-  ${breakpoints.tallDevice} {
+  ${breakpoints.t1} {
+    text-align: center;
+  }
+
+  ${breakpoints.t3} {
     text-align: center;
     font-size: ${space(10)}px;
   }
 
-  ${breakpoints.tallerDevice} {
-    text-align: center;
+  ${breakpoints.t4} {
     font-size: ${space(11)}px;
-  }
-
-  ${breakpoints.ut} {
-    font-size: ${space(12)}px;
   }
 `;
 

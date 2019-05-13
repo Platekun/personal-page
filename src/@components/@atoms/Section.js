@@ -10,28 +10,29 @@ const SectionLayout = styled.section`
   max-width: 480px;
   position: relative;
 
-  ${breakpoints.sm.up} {
+  ${breakpoints.sm} {
     padding: ${space(8)}px ${space(12)}px;
     max-width: 768px;
   }
 
-  ${breakpoints.md.up} {
-    padding: ${space(16)}px;
+  ${breakpoints.md} {
+    padding: ${space(8)}px ${space(16)}px;
     max-width: 940px;
   }
 
-  ${breakpoints.lg.up} {
+  ${breakpoints.lg} {
     max-width: 1264px;
   }
 
-  ${breakpoints.xl.up} {
-    padding-top: ${space(22)}px;
+  ${breakpoints.xl} {
+    padding-top: ${space(11)}px;
     padding-right: ${space(22)}px;
     padding-left: ${space(22)}px;
   }
 
-  @media screen and (min-width: 940px) and (min-height: 1136px) {
+  ${breakpoints.t1} {
     padding-top: ${space(8)}px;
+    padding-bottom: ${space(8)}px;
   }
 `;
 

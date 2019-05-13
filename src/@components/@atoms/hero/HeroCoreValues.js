@@ -11,15 +11,20 @@ export const CoreValues = styled.div`
   max-width: 348px;
   margin: 0 auto;
 
-  ${breakpoints.md.up} {
+  ${breakpoints.md} {
     max-width: 50%;
   }
 
-  ${breakpoints.lg.up} {
+  ${breakpoints.lg} {
     height: unset;
     margin: unset;
     max-width: unset;
     width: 100%;
     display: block;
+  }
+
+  ${breakpoints.t2} {
+    height: 25%;
+    display: flex;
   }
 `;

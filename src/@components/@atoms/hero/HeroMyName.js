@@ -8,24 +8,20 @@ export const MyName = styled.span`
   font-weight: bold;
   font-size: ${space(8)}px;
 
-  ${breakpoints.md.up} {
+  ${breakpoints.md} {
     font-size: ${space(15)}px;
   }
 
-  ${breakpoints.xl.up} {
+  ${breakpoints.xl} {
     font-size: ${space(16)}px;
   }
 
-  ${breakpoints.uw.up} {
+  ${breakpoints.uw} {
     font-size: ${space(17)}px;
   }
 
-  ${breakpoints.tallDevice} {
+  ${breakpoints.t4} {
     font-size: ${space(16)}px;
-  }
-
-  ${breakpoints.ut} {
-    font-size: ${space(17)}px;
   }
 `;
 

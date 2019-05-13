@@ -18,23 +18,23 @@ export const Subtitle = styled.h2`
     font-size: ${space(8)}px;
   }
 
-  ${breakpoints.xl.up} {
+  ${breakpoints.xl} {
     font-size: ${space(8)}px;
   }
 
-  ${breakpoints.uw.up} {
+  ${breakpoints.uw} {
     font-size: ${space(10)}px;
   }
 
-  ${breakpoints.tallDevice} {
+  ${breakpoints.t1} {
     font-size: ${space(8)}px;
   }
 
-  ${breakpoints.tallerDevice} {
+  ${breakpoints.t3} {
     font-size: ${space(10)}px;
   }
 
-  ${breakpoints.ut} {
+  ${breakpoints.t4} {
     font-size: ${space(12)}px;
   }
 `;

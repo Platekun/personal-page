@@ -7,31 +7,31 @@ export const Parragraph = styled.p`
   line-height: 1.5;
   margin-bottom: ${({ marginBottom }) => `${space(marginBottom)}px`};
 
-  ${breakpoints.sm.up} {
+  ${breakpoints.sm} {
     font-size: ${space(5)}px;
   }
 
-  ${breakpoints.lg.up} {
+  ${breakpoints.lg} {
     font-size: ${space(6)}px;
   }
 
-  ${breakpoints.xl.up} {
+  ${breakpoints.xl} {
     font-size: ${space(7)}px;
   }
 
-  ${breakpoints.uw.up} {
+  ${breakpoints.uw} {
     font-size: ${space(8)}px;
   }
 
-  ${breakpoints.tallDevice} {
+  ${breakpoints.t1} {
     font-size: ${space(7)}px;
   }
 
-  ${breakpoints.tallerDevice} {
+  ${breakpoints.t3} {
     font-size: ${space(8)}px;
   }
 
-  ${breakpoints.ut} {
+  ${breakpoints.t4} {
     font-size: ${space(9)}px;
   }
 `;

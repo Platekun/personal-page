@@ -15,11 +15,11 @@ export const Hobbies = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  ${breakpoints.md.up} {
+  ${breakpoints.md} {
     max-width: 519px;
   }
 
-  ${breakpoints.xl.up} {
+  ${breakpoints.xl} {
     margin: ${space(16)}px auto;
   }
 `;

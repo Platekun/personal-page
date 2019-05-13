@@ -6,11 +6,11 @@ import { BookIcon as Icon } from '../icons';
 export const BookIcon = styled(Icon)`
   max-width: 33px;
 
-  ${breakpoints.md.up} {
+  ${breakpoints.md} {
     max-width: calc(66px / 1.5);
   }
 
-  ${breakpoints.xl.up} {
+  ${breakpoints.xl} {
     max-width: 66px;
   }
 `;

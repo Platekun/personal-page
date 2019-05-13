@@ -3,21 +3,26 @@ import styled from '@emotion/styled';
 import { space, breakpoints } from '../../../@theme';
 
 export const GreetingContainer = styled.header`
+  // Starting from 940px
   position: relative;
   bottom: ${space(22)}px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
-  ${breakpoints.tallDevice} {
-    margin-top: ${space(20)}px;
-    margin-bottom: ${space(40)}px;
+  @media screen and (min-width: 1200px) {
     position: static;
     bottom: unset;
   }
 
-  @media screen and (min-width: 1200px) {
+  ${breakpoints.t1} {
     position: static;
     bottom: unset;
+    margin-top: ${space(20)}px;
+    margin-bottom: ${space(20)}px;
+  }
+
+  ${breakpoints.t2} {
+    margin-bottom: 0;
   }
 `;

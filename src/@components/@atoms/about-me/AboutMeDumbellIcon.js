@@ -6,15 +6,15 @@ import { DumbellIcon as Icon } from '../icons';
 export const DumbellIcon = styled(Icon)`
   max-width: 64px;
 
-  ${breakpoints.md.up} {
+  ${breakpoints.md} {
     max-width: calc(129px / 1.5);
   }
 
-  ${breakpoints.lg.up} {
+  ${breakpoints.lg} {
     max-width: calc(129px / 1.2);
   }
 
-  ${breakpoints.xl.up} {
+  ${breakpoints.xl} {
     max-width: 129px;
   }
 `;

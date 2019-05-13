@@ -45,4 +45,10 @@ export const customStyles = css`
     color: ${COLORS.TEXT_PRIMARY};
     margin: 0;
   }
+
+  @media screen and (min-width: 940px) {
+    main {
+      padding-top: 60px;
+    }
+  }
 `;

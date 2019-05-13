@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-import { space, COLORS } from '../../../@theme';
+import { space, COLORS, breakpoints } from '../../../@theme';
 
 export const Link = styled(AnchorLink)`
   font-weight: bold;
@@ -13,12 +13,28 @@ export const Link = styled(AnchorLink)`
     color: ${COLORS.ACCENT};
   }
 
-  @media screen and (min-width: 940px) {
+  ${breakpoints.lg} {
     font-size: ${space(4)}px;
   }
 
-  @media screen and (min-width: 1440px) {
+  ${breakpoints.xl} {
+    font-size: ${space(5)}px;
+  }
+
+  ${breakpoints.uw} {
     font-size: ${space(6)}px;
+  }
+
+  ${breakpoints.t1} {
+    font-size: ${space(5)}px;
+  }
+
+  ${breakpoints.t3} {
+    font-size: ${space(6)}px;
+  }
+
+  ${breakpoints.t4} {
+    font-size: ${space(7)}px;
   }
 `;
 

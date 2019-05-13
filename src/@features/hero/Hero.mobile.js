@@ -10,7 +10,7 @@ import {
 export function MobileHero() {
   return (
     <>
-      <Hero.MobileSection id="top">
+      <Hero.SectionLayout id="top">
         <Hero.Greeting>
           Hello, <br /> <br />
           <Hero.MyName>I am Carlos</Hero.MyName>
@@ -21,7 +21,7 @@ export function MobileHero() {
         <Hero.CallToAction>
           <ScrollIcon />
         </Hero.CallToAction>
-      </Hero.MobileSection>
+      </Hero.SectionLayout>
 
       <Hero.ValuesSection id="values">
         <Hero.CoreValues>

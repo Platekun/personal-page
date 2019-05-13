@@ -6,15 +6,15 @@ import { JoystickIcon as Icon } from '../icons';
 export const JoystickIcon = styled(Icon)`
   max-width: 40px;
 
-  ${breakpoints.md.up} {
+  ${breakpoints.md} {
     max-width: calc(80px / 1.5);
   }
 
-  ${breakpoints.lg.up} {
+  ${breakpoints.lg} {
     max-width: calc(80px / 1.2);
   }
 
-  ${breakpoints.xl.up} {
+  ${breakpoints.xl} {
     max-width: 80px;
   }
 `;

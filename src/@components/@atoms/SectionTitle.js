@@ -8,7 +8,7 @@ export const SectionTitle = styled.h2`
   font-size ${space(7)}px;
   margin-bottom: ${space(12)}px;
 
-  ${breakpoints.md.up} {
+  ${breakpoints.md} {
     font-size ${space(9)}px;
   }
 
@@ -16,7 +16,7 @@ export const SectionTitle = styled.h2`
     font-size ${space(11)}px;
   }
 
-  ${breakpoints.xl.up} {
+  ${breakpoints.xl} {
     font-size ${space(11)}px;
   }
 `;
