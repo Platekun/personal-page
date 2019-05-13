@@ -25,10 +25,14 @@ export const SectionLayout = styled(Section)`
     justify-content: center;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) and (min-height: 800px) {
+    margin-bottom: 0px;
+  }
+
+  @media screen and (min-width: 1200px) and (max-height: 1023px) {
     height: ${sectionHeight};
-    margin: 0 auto;
-    margin-bottom: ${space(30)}px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   ${breakpoints.t1} {

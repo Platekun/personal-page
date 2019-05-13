@@ -10,7 +10,7 @@ export const GreetingContainer = styled.header`
   justify-content: flex-end;
   align-items: center;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) and (max-height: 1023px) {
     position: static;
     bottom: unset;
   }

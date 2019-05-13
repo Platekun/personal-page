@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { space } from '../../../@theme';
 
 export const CallToAction = styled.div`
+  display: none;
   position: absolute;
   bottom: ${space(9)}px;
   transform: translateX(-50%);
@@ -10,6 +11,10 @@ export const CallToAction = styled.div`
   animation-name: glow;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+
+  @media screen and (min-height: 500px) {
+    display: block;
+  }
 
   @keyframes glow {
     0% {

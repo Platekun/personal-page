@@ -1,6 +1,7 @@
 import { css } from '@emotion/core';
 
 import { COLORS } from './colors';
+import { breakpoints } from './breakpoints';
 
 export const customStyles = css`
   html {
@@ -46,7 +47,7 @@ export const customStyles = css`
     margin: 0;
   }
 
-  @media screen and (min-width: 940px) {
+  ${breakpoints.lg} {
     main {
       padding-top: 60px;
     }

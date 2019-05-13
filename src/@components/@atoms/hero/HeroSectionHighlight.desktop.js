@@ -9,8 +9,7 @@ export const DesktopSectionHighlight = styled.div`
   justify-content: space-between;
   flex-direction: column;
 
-  @media screen and (min-width: 1200px) {
-    margin-bottom: ${space(10)}px;
+  @media screen and (min-width: 1200px) and (max-height: 1023px) {
     height: unset;
     flex-direction: row;
   }
