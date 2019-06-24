@@ -12,7 +12,7 @@ export const CallToAction = styled.div`
   animation-duration: 3s;
   animation-iteration-count: infinite;
 
-  @media screen and (min-height: 500px) {
+  @media screen and (min-height: 600px) {
     display: block;
   }
 

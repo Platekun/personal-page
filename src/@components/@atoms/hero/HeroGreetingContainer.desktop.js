@@ -25,4 +25,8 @@ export const GreetingContainer = styled.header`
   ${breakpoints.t2} {
     margin-bottom: 0;
   }
+
+  ${breakpoints.t3} {
+    justify-content: center;
+  }
 `;

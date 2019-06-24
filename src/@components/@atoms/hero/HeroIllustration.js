@@ -1,6 +1,8 @@
 import React from 'react';
 import { css } from '@emotion/core';
 
+import { breakpoints } from '../../../@theme';
+
 const reactLogo = css`
   animation: spin infinite 20s linear;
 
@@ -19,9 +21,27 @@ const reactLogo = css`
   }
 `;
 
+const illustrationWrapper = css`
+  ${breakpoints.t3} {
+    width: 800px;
+    height: 800px;
+  }
+
+  ${breakpoints.t4} {
+    width: 1000px;
+    height: 1000px;
+  }
+`;
+
 export function Illustration() {
   return (
-    <svg width="530px" height="473px" viewBox="0 0 530 473" version="1.1">
+    <svg
+      width="530px"
+      height="473px"
+      viewBox="0 0 530 473"
+      version="1.1"
+      css={illustrationWrapper}
+    >
       <g id="Personal-Page" fill="none" fillRule="evenodd">
         <g id="Landing-Desktop" transform="translate(-88 -158)">
           <g id="Me" transform="translate(88 158)">
