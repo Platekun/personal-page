@@ -4,6 +4,7 @@ import * as NavDrawer from './nav-drawer';
 import * as AboutMe from './about-me';
 
 export * from './icons';
+export * from './logos';
 export { Hero, Nav, NavDrawer, AboutMe };
 export * from './Wrapper';
 export * from './FullHeightSection';
