@@ -2,9 +2,11 @@ import * as Hero from './hero';
 import * as Nav from './nav';
 import * as NavDrawer from './nav-drawer';
 import * as AboutMe from './about-me';
+import * as WorkExperience from './work-experience';
 
 export * from './icons';
-export { Hero, Nav, NavDrawer, AboutMe };
+export * from './logos';
+export { Hero, Nav, NavDrawer, AboutMe, WorkExperience };
 export * from './Wrapper';
 export * from './FullHeightSection';
 export * from './Important';
