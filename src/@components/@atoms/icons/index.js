@@ -6,3 +6,8 @@ export * from './BookIcon';
 export * from './DumbellIcon';
 export * from './JoystickIcon';
 export * from './HeadphonesIcon';
+export * from './CellphoneIcon';
+export * from './IdeaIcon';
+export * from './PaletteIcon';
+export * from './SmileIcon';
+export * from './StarsIcon';
