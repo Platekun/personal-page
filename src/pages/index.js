@@ -1,6 +1,13 @@
 import React from 'react';
 
-import { SEO, Layout, Hero, AboutMe, WorkExperience } from '../@features';
+import {
+  SEO,
+  Layout,
+  Hero,
+  AboutMe,
+  WorkExperience,
+  Skills
+} from '../@features';
 
 export default function IndexPage() {
   return (
@@ -9,6 +16,7 @@ export default function IndexPage() {
       <Hero />
       <AboutMe />
       <WorkExperience />
+      <Skills />
     </Layout>
   );
 }
