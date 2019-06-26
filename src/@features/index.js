@@ -3,4 +3,4 @@ export * from './Layout';
 export * from './hero';
 export * from './about-me';
 export * from './work-experience';
-export * from './what-I-do';
+export * from './skills';

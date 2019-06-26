@@ -6,7 +6,7 @@ import {
   Hero,
   AboutMe,
   WorkExperience,
-  WhatIDo
+  Skills
 } from '../@features';
 
 export default function IndexPage() {
@@ -16,7 +16,7 @@ export default function IndexPage() {
       <Hero />
       <AboutMe />
       <WorkExperience />
-      <WhatIDo />
+      <Skills />
     </Layout>
   );
 }
