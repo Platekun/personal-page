@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { MobileNavigationProvider } from '../@contexts';
+import { NavigationDrawerContextProvider } from '../@contexts';
 import { AppBar, NavigationDrawer } from '../@molecules';
 
 export function MobileNavigation() {
   return (
-    <MobileNavigationProvider>
+    <NavigationDrawerContextProvider>
       <AppBar />
       <NavigationDrawer />
-    </MobileNavigationProvider>
+    </NavigationDrawerContextProvider>
   );
 }

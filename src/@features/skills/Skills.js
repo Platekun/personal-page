@@ -11,9 +11,9 @@ import {
   StarsIcon
 } from '../../@components/@atoms';
 
-export function WhatIDo() {
+export function WhatIDo({ appBarVariant }) {
   return (
-    <Section id="skills">
+    <Section id="skills" appBarVariant={appBarVariant}>
       <SectionTitle>What I do</SectionTitle>
 
       <ul>
