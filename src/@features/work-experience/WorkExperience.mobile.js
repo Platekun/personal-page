@@ -1,93 +1,78 @@
 import React from 'react';
-import styled from '@emotion/styled';
 
-import { COLORS } from '../../@theme';
-import { Section, SectionTitle, IdeawareLogo } from '../../@components/@atoms';
 import {
-  WorkExperiencesList,
-  PastTicomLogo,
-  PastNativAppsLogo,
-  Experience,
-  WorkPlaceLogoContainer,
-  PresentExperienceLogo,
-  ExperienceDetails,
-  JobTitle,
-  EmploymentPeriod
-} from './common';
-
-const Divider = styled.hr`
-  width: 5px;
-  border-radius: 5px;
-  border: none;
-  background-color: ${COLORS.PRIMARY};
-  margin-top: 14px;
-  margin-bottom: 14px;
-  height: 75px;
-  position: static;
-  top: unset;
-  transform: rotate(180deg);
-
-  ${({ present }) =>
-    !present
-      ? ''
-      : `
-    height: 90px;
-    position: relative;
-    top: 16px;
-  `}
-`;
+  Section,
+  SectionTitle,
+  IdeawareLogo,
+  WorkExperience
+} from '../../@components/@atoms';
+import { PastTicomLogo, PastNativAppsLogo } from './past-logos';
 
 export function MobileWorkExperience() {
   return (
     <Section id="experience">
       <SectionTitle>Work Experience</SectionTitle>
 
-      <Divider />
+      <WorkExperience.Divider />
 
-      <WorkExperiencesList>
-        <Experience>
-          <WorkPlaceLogoContainer href="http://ticom.co/wordpress/la-empresa">
+      <WorkExperience.Jobs>
+        <WorkExperience.Entry>
+          <WorkExperience.JobLogoContainer href="http://ticom.co/wordpress/la-empresa">
             <PastTicomLogo />
-          </WorkPlaceLogoContainer>
+          </WorkExperience.JobLogoContainer>
 
-          <ExperienceDetails>
+          <WorkExperience.JobDetails>
             <h3 hidden>Worked at TICOM S.A</h3>
-            <JobTitle>Full Stack Developer</JobTitle>
-            <EmploymentPeriod>Jan 2016 - Jul 2016</EmploymentPeriod>
-          </ExperienceDetails>
-        </Experience>
+            <WorkExperience.JobTitle>
+              Full Stack Developer
+            </WorkExperience.JobTitle>
+            <WorkExperience.EmploymentPeriod>
+              Jan 2016 - Jul 2016
+            </WorkExperience.EmploymentPeriod>
+          </WorkExperience.JobDetails>
+        </WorkExperience.Entry>
 
-        <Divider />
+        <WorkExperience.Divider />
 
-        <Experience>
-          <WorkPlaceLogoContainer href="https://nativapps.com/">
+        <WorkExperience.Entry>
+          <WorkExperience.JobLogoContainer href="https://nativapps.com/">
             <PastNativAppsLogo />
-          </WorkPlaceLogoContainer>
+          </WorkExperience.JobLogoContainer>
 
-          <ExperienceDetails>
+          <WorkExperience.JobDetails>
             <h3 hidden>Worked at NativApps S.A.S</h3>
-            <JobTitle>Back-End Developer</JobTitle>
-            <JobTitle>Front-End Developer</JobTitle>
-            <EmploymentPeriod>Feb 2017 - Mar 2018</EmploymentPeriod>
-          </ExperienceDetails>
-        </Experience>
+            <WorkExperience.JobTitle>
+              Back-End Developer
+            </WorkExperience.JobTitle>
+            <WorkExperience.JobTitle>
+              Front-End Developer
+            </WorkExperience.JobTitle>
+            <WorkExperience.EmploymentPeriod>
+              Feb 2017 - Mar 2018
+            </WorkExperience.EmploymentPeriod>
+          </WorkExperience.JobDetails>
+        </WorkExperience.Entry>
 
-        <Divider present />
+        <WorkExperience.Divider variant="present" />
 
-        <Experience>
-          <WorkPlaceLogoContainer href="http://ideaware.co">
-            <PresentExperienceLogo>
+        <WorkExperience.Entry>
+          <WorkExperience.JobLogoContainer href="http://ideaware.co">
+            <WorkExperience.CurrentJobLogo>
               <IdeawareLogo />
-            </PresentExperienceLogo>
-          </WorkPlaceLogoContainer>
+            </WorkExperience.CurrentJobLogo>
+          </WorkExperience.JobLogoContainer>
 
-          <ExperienceDetails present>
+          <WorkExperience.JobDetails variant="present">
             <h3 hidden>Currently working at Ideaware</h3>
-            <JobTitle>Front-End Developer</JobTitle>
-            <EmploymentPeriod>Jul 2018 - Present</EmploymentPeriod>
-          </ExperienceDetails>
-        </Experience>
-      </WorkExperiencesList>
+            <WorkExperience.JobTitle>
+              Front-End Developer
+            </WorkExperience.JobTitle>
+            <WorkExperience.EmploymentPeriod>
+              Jul 2018 - Present
+            </WorkExperience.EmploymentPeriod>
+          </WorkExperience.JobDetails>
+        </WorkExperience.Entry>
+      </WorkExperience.Jobs>
     </Section>
   );
 }

@@ -1,118 +1,84 @@
 import React from 'react';
-import styled from '@emotion/styled';
 
-import { COLORS } from '../../@theme';
-import { Section, SectionTitle, IdeawareLogo } from '../../@components/@atoms';
 import {
-  WorkExperiencesList,
-  PastTicomLogo,
-  PastNativAppsLogo,
-  Experience,
-  WorkPlaceLogoContainer,
-  PresentExperienceLogo,
-  ExperienceDetails,
-  JobTitle,
-  EmploymentPeriod
-} from './common';
-
-const TimeSegment = styled.div`
-  width: 5px;
-  background-color: ${COLORS.PRIMARY};
-  height: 100%;
-  ${({ start }) =>
-    !start
-      ? ''
-      : `
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;    
-  `}
-
-  ${({ present }) =>
-    !present
-      ? ''
-      : `
-    height: 50%;
-    position: relative;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    bottom: 50px;
-  `};
-`;
-
-const EventInTimeline = styled.div`
-  width: 5px;
-  height: 65px;
-  background-color: ${COLORS.PRIMARY};
-  transform: rotate(270deg);
-  position: relative;
-  top: 65%;
-  border-radius: 5px;
-  ${({ past }) =>
-    !past
-      ? ''
-      : `
-    top: 30%;
-    opacity: 0.1;
-  `}
-`;
+  Section,
+  SectionTitle,
+  IdeawareLogo,
+  WorkExperience
+} from '../../@components/@atoms';
+import { PastTicomLogo, PastNativAppsLogo } from './past-logos';
 
 export function DesktopWorkExperience() {
   return (
     <Section id="experience">
       <SectionTitle>Work Experience</SectionTitle>
 
-      <WorkExperiencesList>
-        <Experience>
-          <WorkPlaceLogoContainer href="http://ticom.co/wordpress/la-empresa">
+      <WorkExperience.Jobs>
+        <WorkExperience.Entry>
+          <WorkExperience.JobLogoContainer href="http://ticom.co/wordpress/la-empresa">
             <PastTicomLogo />
-          </WorkPlaceLogoContainer>
+          </WorkExperience.JobLogoContainer>
 
-          <TimeSegment start>
-            <EventInTimeline past />
-          </TimeSegment>
+          <WorkExperience.TimeSegment variant="beggining">
+            <WorkExperience.TimelineEvent />
+          </WorkExperience.TimeSegment>
 
-          <ExperienceDetails>
+          <WorkExperience.JobDetails>
             <h3 hidden>Worked at TICOM S.A</h3>
-            <JobTitle>Full Stack Developer</JobTitle>
-            <EmploymentPeriod>Jan 2016 - Jul 2016</EmploymentPeriod>
-          </ExperienceDetails>
-        </Experience>
+            <WorkExperience.JobTitle>
+              Full Stack Developer
+            </WorkExperience.JobTitle>
+            <WorkExperience.EmploymentPeriod>
+              Jan 2016 - Jul 2016
+            </WorkExperience.EmploymentPeriod>
+          </WorkExperience.JobDetails>
+        </WorkExperience.Entry>
 
-        <Experience>
-          <WorkPlaceLogoContainer href="https://nativapps.com/">
+        <WorkExperience.Entry>
+          <WorkExperience.JobLogoContainer href="https://nativapps.com/">
             <PastNativAppsLogo />
-          </WorkPlaceLogoContainer>
+          </WorkExperience.JobLogoContainer>
 
-          <TimeSegment>
-            <EventInTimeline past />
-          </TimeSegment>
+          <WorkExperience.TimeSegment>
+            <WorkExperience.TimelineEvent />
+          </WorkExperience.TimeSegment>
 
-          <ExperienceDetails>
+          <WorkExperience.JobDetails>
             <h3 hidden>Worked at NativApps S.A.S</h3>
-            <JobTitle>Back-End Developer</JobTitle>
-            <JobTitle>Front-End Developer</JobTitle>
-            <EmploymentPeriod>Feb 2017 - Mar 2018</EmploymentPeriod>
-          </ExperienceDetails>
-        </Experience>
+            <WorkExperience.JobTitle>
+              Back-End Developer
+            </WorkExperience.JobTitle>
+            <WorkExperience.JobTitle>
+              Front-End Developer
+            </WorkExperience.JobTitle>
+            <WorkExperience.EmploymentPeriod>
+              Feb 2017 - Mar 2018
+            </WorkExperience.EmploymentPeriod>
+          </WorkExperience.JobDetails>
+        </WorkExperience.Entry>
 
-        <Experience>
-          <WorkPlaceLogoContainer href="http://ideaware.co">
-            <PresentExperienceLogo>
+        <WorkExperience.Entry>
+          <WorkExperience.JobLogoContainer href="http://ideaware.co">
+            <WorkExperience.CurrentJobLogo>
               <IdeawareLogo />
-            </PresentExperienceLogo>
-          </WorkPlaceLogoContainer>
+            </WorkExperience.CurrentJobLogo>
+          </WorkExperience.JobLogoContainer>
 
-          <TimeSegment present>
-            <EventInTimeline />
-          </TimeSegment>
+          <WorkExperience.TimeSegment variant="present">
+            <WorkExperience.TimelineEvent variant="present" />
+          </WorkExperience.TimeSegment>
 
-          <ExperienceDetails current>
+          <WorkExperience.JobDetails variant="present">
             <h3 hidden>Currently working at Ideaware</h3>
-            <JobTitle>Front-End Developer</JobTitle>
-            <EmploymentPeriod>Jul 2018 - Present</EmploymentPeriod>
-          </ExperienceDetails>
-        </Experience>
-      </WorkExperiencesList>
+            <WorkExperience.JobTitle>
+              Front-End Developer
+            </WorkExperience.JobTitle>
+            <WorkExperience.EmploymentPeriod>
+              Jul 2018 - Present
+            </WorkExperience.EmploymentPeriod>
+          </WorkExperience.JobDetails>
+        </WorkExperience.Entry>
+      </WorkExperience.Jobs>
     </Section>
   );
 }
