@@ -6,7 +6,7 @@ import {
   IdeawareLogo,
   WorkExperience
 } from '../../@components/@atoms';
-import { PastTicomLogo, PastNativAppsLogo } from './past-logos';
+import { PastTicomLogo, PastNativAppsLogo, PastFslLogo } from './past-logos';
 
 export function DesktopWorkExperience() {
   return (
@@ -53,6 +53,27 @@ export function DesktopWorkExperience() {
             </WorkExperience.JobTitle>
             <WorkExperience.EmploymentPeriod>
               Feb 2017 - Mar 2018
+            </WorkExperience.EmploymentPeriod>
+          </WorkExperience.JobDetails>
+        </WorkExperience.Entry>
+
+        <WorkExperience.Entry>
+          <WorkExperience.JobLogoContainer href="https://fullstacklabs.co/">
+            <PastFslLogo />
+          </WorkExperience.JobLogoContainer>
+
+          <WorkExperience.TimeSegment>
+            <WorkExperience.TimelineEvent />
+          </WorkExperience.TimeSegment>
+
+          <WorkExperience.JobDetails>
+            <h3 hidden>Worked at FullStack Labs</h3>
+
+            <WorkExperience.JobTitle>
+              Front-End Developer
+            </WorkExperience.JobTitle>
+            <WorkExperience.EmploymentPeriod>
+              Mar 2018 - Jun 2018
             </WorkExperience.EmploymentPeriod>
           </WorkExperience.JobDetails>
         </WorkExperience.Entry>

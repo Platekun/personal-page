@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { TicomLogo, NativAppsLogo } from '../../@components/@atoms';
+import { TicomLogo, NativAppsLogo, FslLogo } from '../../@components/@atoms';
 
 function makePastExperienceLogo(logo) {
   return styled(logo)`
@@ -13,3 +13,5 @@ function makePastExperienceLogo(logo) {
 export const PastTicomLogo = makePastExperienceLogo(TicomLogo);
 
 export const PastNativAppsLogo = makePastExperienceLogo(NativAppsLogo);
+
+export const PastFslLogo = makePastExperienceLogo(FslLogo);
