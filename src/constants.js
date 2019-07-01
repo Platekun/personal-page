@@ -16,6 +16,10 @@ export const LINKS = [
     url: '#skills'
   },
   {
+    label: 'Tools',
+    url: '#tools'
+  },
+  {
     label: 'Contact',
     url: '#contact'
   }

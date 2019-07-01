@@ -1,12 +1,8 @@
 import React from 'react';
 
-export const NavigationDrawerContext = React.createContext({
-  current: '',
-  toggleNavigationDrawer: () => {},
-  closeDrawer: () => {}
-});
+export const NavigationDrawerContext = React.createContext({});
 
-export function MobileNavigationProvider(props) {
+export function NavigationDrawerContextProvider(props) {
   const [current, setCurrent] = React.useState('hidden');
 
   function openDrawer() {

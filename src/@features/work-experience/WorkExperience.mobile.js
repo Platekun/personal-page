@@ -8,9 +8,9 @@ import {
 } from '../../@components/@atoms';
 import { PastTicomLogo, PastNativAppsLogo } from './past-logos';
 
-export function MobileWorkExperience() {
+export function MobileWorkExperience({ appBarVariant }) {
   return (
-    <Section id="experience">
+    <Section id="experience" appBarVariant={appBarVariant}>
       <SectionTitle>Work Experience</SectionTitle>
 
       <WorkExperience.Divider />

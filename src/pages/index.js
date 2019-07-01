@@ -6,17 +6,22 @@ import {
   Hero,
   AboutMe,
   WorkExperience,
-  Skills
+  Skills,
+  FavoriteTools
 } from '../@features';
+import { AppBarContextProvider } from '../@components/@contexts';
 
 export default function IndexPage() {
   return (
-    <Layout>
-      <SEO />
-      <Hero />
-      <AboutMe />
-      <WorkExperience />
-      <Skills />
-    </Layout>
+    <AppBarContextProvider>
+      <Layout>
+        <SEO />
+        <Hero appBarVariant="inverted" />
+        <AboutMe appBarVariant="normal" />
+        <WorkExperience appBarVariant="normal" />
+        <Skills appBarVariant="normal" />
+        <FavoriteTools appBarVariant="inverted" />
+      </Layout>
+    </AppBarContextProvider>
   );
 }

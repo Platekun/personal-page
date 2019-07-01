@@ -4,3 +4,4 @@ export * from './hero';
 export * from './about-me';
 export * from './work-experience';
 export * from './skills';
+export * from './favorite-tools';
