@@ -10,6 +10,7 @@ export const Section = styled(SectionBase)`
   ${breakpoints.md} {
     background-color: unset;
     margin-top: ${space(8)}px;
+    margin-bottom: ${space(8)}px;
 
     &::before {
       background-color: ${COLORS.PRIMARY};

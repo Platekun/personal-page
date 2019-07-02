@@ -17,3 +17,6 @@ export * from './SketchIcon';
 export * from './NodejsIcon';
 export * from './ReactIcon';
 export * from './TypeScriptIcon';
+export * from './LinkedInIcon';
+export * from './GithubIcon';
+export * from './TwitterIcon';
