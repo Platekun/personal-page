@@ -21,6 +21,6 @@ export const LINKS = [
   },
   {
     label: 'Contact',
-    url: '#contact'
+    url: '#contact-me'
   }
 ];

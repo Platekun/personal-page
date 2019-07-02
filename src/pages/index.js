@@ -7,7 +7,8 @@ import {
   AboutMe,
   WorkExperience,
   Skills,
-  FavoriteTools
+  FavoriteTools,
+  ContactMe
 } from '../@features';
 import { AppBarContextProvider } from '../@components/@contexts';
 
@@ -21,6 +22,7 @@ export default function IndexPage() {
         <WorkExperience appBarVariant="normal" />
         <Skills appBarVariant="normal" />
         <FavoriteTools appBarVariant="inverted" />
+        <ContactMe appBarVariant="normal" />
       </Layout>
     </AppBarContextProvider>
   );
