@@ -20,9 +20,9 @@ export default function IndexPage() {
         <Hero appBarVariant="inverted" />
         <AboutMe appBarVariant="normal" />
         <WorkExperience appBarVariant="normal" />
-        <Skills appBarVariant="normal" />
+        {/* <Skills appBarVariant="normal" />
         <FavoriteTools appBarVariant="inverted" />
-        <ContactMe appBarVariant="normal" />
+        <ContactMe appBarVariant="normal" /> */}
       </Layout>
     </AppBarContextProvider>
   );
