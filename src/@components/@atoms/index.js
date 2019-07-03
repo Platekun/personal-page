@@ -25,6 +25,7 @@ export * from './Important';
 export * from './Section';
 export * from './SectionTitle';
 export * from './Parragraph';
+export * from './Link';
 
 // Mobile Only
 export * from './AppBarLayout.mobile';
