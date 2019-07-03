@@ -1,5 +1,5 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
+import { css } from '@emotion/core';
 
 import { MobileWorkExperience } from './WorkExperience.mobile';
 import { DesktopWorkExperience } from './WorkExperience.desktop';
@@ -7,13 +7,27 @@ import { DesktopWorkExperience } from './WorkExperience.desktop';
 export function WorkExperience({ appBarVariant }) {
   return (
     <>
-      <MediaQuery query="(max-width: 767px)">
+      <div
+        css={css`
+          @media screen and (min-width: 768px) {
+            display: none;
+          }
+        `}
+      >
         <MobileWorkExperience appBarVariant={appBarVariant} />
-      </MediaQuery>
+      </div>
 
-      <MediaQuery query="(min-width: 768px)">
+      <div
+        css={css`
+          display: none;
+
+          @media screen and (min-width: 768px) {
+            display: block;
+          }
+        `}
+      >
         <DesktopWorkExperience />
-      </MediaQuery>
+      </div>
     </>
   );
 }

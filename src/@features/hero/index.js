@@ -1,5 +1,5 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
+import { css } from '@emotion/core';
 
 import { DesktopHero } from './Hero.desktop';
 import { MobileHero } from './Hero.mobile';
@@ -7,13 +7,27 @@ import { MobileHero } from './Hero.mobile';
 export function Hero({ appBarVariant }) {
   return (
     <>
-      <MediaQuery maxWidth={939}>
+      <div
+        css={css`
+          @media screen and (min-width: 940px) {
+            display: none;
+          }
+        `}
+      >
         <MobileHero appBarVariant={appBarVariant} />
-      </MediaQuery>
+      </div>
 
-      <MediaQuery minWidth={940}>
+      <div
+        css={css`
+          display: none;
+
+          @media screen and (min-width: 940px) {
+            display: block;
+          }
+        `}
+      >
         <DesktopHero />
-      </MediaQuery>
+      </div>
     </>
   );
 }
