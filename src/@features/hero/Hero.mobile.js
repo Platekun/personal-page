@@ -7,10 +7,10 @@ import {
   Hero
 } from '../../@components/@atoms';
 
-export function MobileHero() {
+export function MobileHero({ appBarVariant }) {
   return (
     <>
-      <Hero.SectionLayout id="top">
+      <Hero.SectionLayout id="top" appBarVariant={appBarVariant}>
         <Hero.Greeting>
           Hello, <br /> <br />
           <Hero.MyName>I am Carlos</Hero.MyName>
@@ -23,7 +23,7 @@ export function MobileHero() {
         </Hero.CallToAction>
       </Hero.SectionLayout>
 
-      <Hero.ValuesSection id="values">
+      <Hero.ValuesSection id="values" appBarVariant={appBarVariant}>
         <Hero.CoreValues>
           <LoveIcon />
 

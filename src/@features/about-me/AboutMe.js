@@ -8,9 +8,9 @@ import {
   AboutMe
 } from '../../@components/@atoms';
 
-export function AboutMeSection() {
+export function AboutMeSection({ appBarVariant }) {
   return (
-    <Section id="about-me">
+    <Section id="about-me" appBarVariant={appBarVariant}>
       <SectionTitle>Who am I?</SectionTitle>
 
       <article>

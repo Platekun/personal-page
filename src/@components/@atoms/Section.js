@@ -1,8 +1,10 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import Observer from '@researchgate/react-intersection-observer';
 import styled from '@emotion/styled';
+import useWindowSize from 'react-use/lib/useWindowSize';
+
 import { space, breakpoints } from '../../@theme';
+import { AppBarContext } from '../@contexts';
 
 const SectionLayout = styled.section`
   padding: ${space(8)}px;
@@ -36,18 +38,30 @@ const SectionLayout = styled.section`
   }
 `;
 
-export function SectionBase({ id, location, history, ...rest }) {
-  function onObserverChange(event) {
-    const shouldUpdateHash = event.isIntersecting && location.hash !== id;
+export function Section({ id, appBarVariant, ...rest }) {
+  const { setNormal, setInverted } = React.useContext(AppBarContext);
+  const { height } = useWindowSize();
 
-    shouldUpdateHash && history.replace(`#${id}`);
+  function onObserverChange(event) {
+    const shouldUpdateHash =
+      event.isIntersecting && window.location.hash !== id;
+    if (shouldUpdateHash) {
+      window.history.replaceState(null, null, `#${id}`);
+      if (height < 940) {
+        if (appBarVariant === 'normal') {
+          setNormal();
+        } else if (appBarVariant === 'inverted') {
+          setInverted();
+        }
+      }
+    }
   }
 
-  return (
+  return id ? (
     <Observer onChange={onObserverChange} threshold={[0.5]}>
       <SectionLayout id={id} {...rest} />
     </Observer>
+  ) : (
+    <SectionLayout {...rest} />
   );
 }
-
-export const Section = withRouter(SectionBase);

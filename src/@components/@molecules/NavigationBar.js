@@ -15,7 +15,7 @@ export function NavigationBar() {
             idx={idx}
             align="horizontal"
           >
-            <Nav.Link href={link.url} offset="0">
+            <Nav.Link href={link.url} offset="30">
               {link.label}
             </Nav.Link>
           </Nav.ListItem>

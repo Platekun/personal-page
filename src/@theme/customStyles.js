@@ -1,9 +1,15 @@
 import { css } from '@emotion/core';
 
+import NeuzeitGroFont from './NeuzeitGro.ttf';
 import { COLORS } from './colors';
 import { breakpoints } from './breakpoints';
 
 export const customStyles = css`
+  @font-face {
+    font-family: 'NeuzeitGro';
+    src: url('./${NeuzeitGroFont}');
+  }
+
   html {
     box-sizing: border-box;
   }
