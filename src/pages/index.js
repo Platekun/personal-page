@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {
-  SEO,
   Layout,
   Hero,
   AboutMe,
@@ -15,13 +14,14 @@ import { AppBarContextProvider } from '../@components/@contexts';
 export default function IndexPage() {
   return (
     <AppBarContextProvider>
-      <SEO />
-      <Hero appBarVariant="inverted" />
-      <AboutMe appBarVariant="normal" />
-      <WorkExperience appBarVariant="normal" />
-      <Skills appBarVariant="normal" />
-      <FavoriteTools appBarVariant="inverted" />
-      <ContactMe appBarVariant="normal" />
+      <Layout>
+        <Hero appBarVariant="inverted" />
+        <AboutMe appBarVariant="normal" />
+        <WorkExperience appBarVariant="normal" />
+        <Skills appBarVariant="normal" />
+        <FavoriteTools appBarVariant="inverted" />
+        <ContactMe appBarVariant="normal" />
+      </Layout>
     </AppBarContextProvider>
   );
 }
