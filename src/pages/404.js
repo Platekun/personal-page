@@ -1,13 +1,44 @@
 import React from 'react';
+import { css } from '@emotion/core';
 
-import { Layout, SEO } from '../@features';
+import { globalStyles } from '../@theme';
+import { SEO } from '../@features';
+import { Section, SectionTitle, Parragraph, Link } from '../@components/@atoms';
 
 export default function NotFoundPage() {
   return (
-    <Layout>
+    <>
+      {globalStyles}
+
       <SEO title="404: Not found" />
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </Layout>
+
+      <Section
+        css={css`
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        `}
+      >
+        <div
+          css={css`
+            text-align: center;
+          `}
+        >
+          <SectionTitle>
+            Page not found{' '}
+            <span role="img" aria-label="Sad emoji">
+              🙁
+            </span>
+          </SectionTitle>
+
+          <Parragraph>
+            You tried to access that currently does not exist️
+          </Parragraph>
+
+          <Link to="/">Go home</Link>
+        </div>
+      </Section>
+    </>
   );
 }

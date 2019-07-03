@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import MediaQuery from 'react-responsive';
 import { css } from '@emotion/core';
 
@@ -9,7 +8,7 @@ import { MobileNavigation, DesktopNavigation } from '../@components/@organisms';
 
 export function Layout(props) {
   return (
-    <BrowserRouter>
+    <>
       {globalStyles}
 
       <MediaQuery query="(max-width: 939px)">
@@ -27,6 +26,6 @@ export function Layout(props) {
         `}
         {...props}
       />
-    </BrowserRouter>
+    </>
   );
 }
