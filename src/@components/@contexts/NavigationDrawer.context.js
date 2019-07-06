@@ -6,7 +6,9 @@ export function NavigationDrawerContextProvider(props) {
   const [current, setCurrent] = React.useState('hidden');
 
   function openDrawer() {
-    setCurrent('visible');
+    // If we set this in a sync way, they OnClick listener attached to the window document will close the drawer immediatly.
+    // That's why this little hack is used, to defer until the click event has been executed
+    setTimeout(() => setCurrent('visible'), 0);
   }
 
   function closeDrawer() {

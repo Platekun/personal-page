@@ -36,13 +36,11 @@ export function NavigationDrawer() {
 
   return (
     <>
-      <NavDrawer.DrawerContainer visible={isVisible}>
-        {isVisible ? (
-          <ClickOutside onClickOut={closeDrawer}>{drawerContent}</ClickOutside>
-        ) : (
-          drawerContent
-        )}
-      </NavDrawer.DrawerContainer>
+      <ClickOutside onClickOut={isVisible ? closeDrawer : undefined}>
+        <NavDrawer.DrawerContainer visible={isVisible}>
+          {drawerContent}
+        </NavDrawer.DrawerContainer>
+      </ClickOutside>
 
       {isVisible && <NavDrawer.DrawerOverlay />}
     </>
