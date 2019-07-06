@@ -1,33 +1,26 @@
 import React from 'react';
-import { css } from '@emotion/core';
 
 import { DesktopHero } from './Hero.desktop';
 import { MobileHero } from './Hero.mobile';
+import { CoreValuesMobile } from './CoreValues.mobile';
+import { Hero, HiddenUpLg, HiddenDownLg } from '../../@components/@atoms';
 
-export function Hero({ appBarVariant }) {
+export function HeroComponent({ appBarVariant }) {
   return (
     <>
-      <div
-        css={css`
-          @media screen and (min-width: 940px) {
-            display: none;
-          }
-        `}
-      >
-        <MobileHero appBarVariant={appBarVariant} />
-      </div>
+      <Hero.SectionLayout id="top" appBarVariant={appBarVariant}>
+        <HiddenUpLg>
+          <MobileHero appBarVariant={appBarVariant} />
+        </HiddenUpLg>
 
-      <div
-        css={css`
-          display: none;
+        <HiddenDownLg>
+          <DesktopHero />
+        </HiddenDownLg>
+      </Hero.SectionLayout>
 
-          @media screen and (min-width: 940px) {
-            display: block;
-          }
-        `}
-      >
-        <DesktopHero />
-      </div>
+      <HiddenUpLg>
+        <CoreValuesMobile />
+      </HiddenUpLg>
     </>
   );
 }

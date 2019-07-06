@@ -2,16 +2,16 @@ import React from 'react';
 import cuid from 'cuid';
 
 import { Nav } from '../@atoms';
-import { LINKS } from '../../constants';
+import links from './links';
 
 export function NavigationBar() {
   return (
     <Nav.Container>
       <Nav.List align="horizontal">
-        {LINKS.map((link, idx) => (
+        {links.map((link, idx) => (
           <Nav.ListItem
             key={cuid()}
-            size={LINKS.length}
+            size={links.length}
             idx={idx}
             align="horizontal"
           >

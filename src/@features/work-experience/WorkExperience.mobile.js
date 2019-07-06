@@ -1,18 +1,11 @@
 import React from 'react';
 
-import {
-  Section,
-  SectionTitle,
-  IdeawareLogo,
-  WorkExperience
-} from '../../@components/@atoms';
+import { IdeawareLogo, WorkExperience } from '../../@components/@atoms';
 import { PastTicomLogo, PastNativAppsLogo, PastFslLogo } from './past-logos';
 
 export function MobileWorkExperience({ appBarVariant }) {
   return (
-    <Section id="experience" appBarVariant={appBarVariant}>
-      <SectionTitle>Work Experience</SectionTitle>
-
+    <>
       <WorkExperience.Divider />
 
       <WorkExperience.Jobs>
@@ -94,6 +87,6 @@ export function MobileWorkExperience({ appBarVariant }) {
           </WorkExperience.JobDetails>
         </WorkExperience.Entry>
       </WorkExperience.Jobs>
-    </Section>
+    </>
   );
 }
