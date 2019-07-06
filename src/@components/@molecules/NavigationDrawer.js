@@ -27,9 +27,7 @@ export function NavigationDrawer() {
             idx={idx}
             align="vertical"
           >
-            <Nav.Link href={link.url} onClick={closeDrawer}>
-              {link.label}
-            </Nav.Link>
+            <Nav.Link href={link.url}>{link.label}</Nav.Link>
           </Nav.ListItem>
         ))}
       </Nav.List>
