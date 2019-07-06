@@ -6,6 +6,10 @@ export function makeLink(base) {
   return styled(base)`
     font-weight: bold;
     text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: ease 0.3s color;
 
     &:hover {

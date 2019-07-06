@@ -4,7 +4,7 @@ import cuid from 'cuid';
 
 import { NavigationDrawerContext } from '../@contexts';
 import { Nav, NavDrawer, HamburgerIcon, IconButton } from '../@atoms';
-import { LINKS } from '../../constants';
+import links from './links';
 
 export function NavigationDrawer() {
   const { current, closeDrawer } = React.useContext(NavigationDrawerContext);
@@ -20,16 +20,15 @@ export function NavigationDrawer() {
       </NavDrawer.HamburgerContainer>
 
       <Nav.List align="vertical">
-        {LINKS.map((link, idx) => (
+        {links.map((link, idx) => (
           <Nav.ListItem
             key={cuid()}
-            size={LINKS.length}
+            size={links.length}
             idx={idx}
             align="vertical"
+            onClick={closeDrawer}
           >
-            <Nav.Link href={link.url} onClick={closeDrawer}>
-              {link.label}
-            </Nav.Link>
+            <Nav.Link href={link.url}>{link.label}</Nav.Link>
           </Nav.ListItem>
         ))}
       </Nav.List>

@@ -2,7 +2,7 @@ import React from 'react';
 
 import {
   Layout,
-  Hero,
+  HeroComponent,
   AboutMe,
   WorkExperience,
   Skills,
@@ -15,7 +15,7 @@ export default function IndexPage() {
   return (
     <AppBarContextProvider>
       <Layout>
-        <Hero appBarVariant="inverted" />
+        <HeroComponent appBarVariant="inverted" />
         <AboutMe appBarVariant="normal" />
         <WorkExperience appBarVariant="normal" />
         <Skills appBarVariant="normal" />

@@ -1,33 +1,26 @@
 import React from 'react';
-import { css } from '@emotion/core';
 
+import {
+  Section,
+  SectionTitle,
+  HiddenUpMd,
+  HiddenDownMd
+} from '../../@components/@atoms';
 import { MobileWorkExperience } from './WorkExperience.mobile';
 import { DesktopWorkExperience } from './WorkExperience.desktop';
 
 export function WorkExperience({ appBarVariant }) {
   return (
-    <>
-      <div
-        css={css`
-          @media screen and (min-width: 768px) {
-            display: none;
-          }
-        `}
-      >
+    <Section id="work-experience" appBarVariant={appBarVariant}>
+      <SectionTitle>Work Experience</SectionTitle>
+
+      <HiddenUpMd>
         <MobileWorkExperience appBarVariant={appBarVariant} />
-      </div>
+      </HiddenUpMd>
 
-      <div
-        css={css`
-          display: none;
-
-          @media screen and (min-width: 768px) {
-            display: block;
-          }
-        `}
-      >
+      <HiddenDownMd>
         <DesktopWorkExperience />
-      </div>
-    </>
+      </HiddenDownMd>
+    </Section>
   );
 }

@@ -26,6 +26,10 @@ export * from './Section';
 export * from './SectionTitle';
 export * from './Parragraph';
 export * from './Link';
+export * from './HiddenUpMd';
+export * from './HiddenDownMd';
+export * from './HiddenUpLg';
+export * from './HiddenDownLg';
 
 // Mobile Only
 export * from './AppBarLayout.mobile';
