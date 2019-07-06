@@ -4,7 +4,7 @@ import { ScrollIcon, Hero } from '../../@components/@atoms';
 
 export function MobileHero({ appBarVariant }) {
   return (
-    <Hero.SectionLayout id="top" appBarVariant={appBarVariant}>
+    <>
       <Hero.Greeting>
         Hello, <br /> <br />
         <Hero.MyName>I am Carlos</Hero.MyName>
@@ -15,6 +15,6 @@ export function MobileHero({ appBarVariant }) {
       <Hero.CallToAction>
         <ScrollIcon />
       </Hero.CallToAction>
-    </Hero.SectionLayout>
+    </>
   );
 }

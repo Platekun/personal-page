@@ -56,9 +56,6 @@ export function MobileWorkExperience({ appBarVariant }) {
           <WorkExperience.JobDetails>
             <h3 hidden>Worked at FullStack Labs</h3>
             <WorkExperience.JobTitle>
-              Back-End Developer
-            </WorkExperience.JobTitle>
-            <WorkExperience.JobTitle>
               Front-End Developer
             </WorkExperience.JobTitle>
             <WorkExperience.EmploymentPeriod>
