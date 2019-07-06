@@ -40,14 +40,14 @@ const SectionLayout = styled.section`
 
 export function Section({ id, appBarVariant, ...rest }) {
   const { setNormal, setInverted } = React.useContext(AppBarContext);
-  const { height } = useWindowSize();
+  const { width } = useWindowSize();
 
   function onObserverChange(event) {
     const shouldUpdateHash =
       event.isIntersecting && window.location.hash !== id;
     if (shouldUpdateHash) {
       window.history.replaceState(null, null, `#${id}`);
-      if (height < 940) {
+      if (width < 940) {
         if (appBarVariant === 'normal') {
           setNormal();
         } else if (appBarVariant === 'inverted') {
