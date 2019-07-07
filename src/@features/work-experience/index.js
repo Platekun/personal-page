@@ -1,19 +1,26 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
 
+import {
+  Section,
+  SectionTitle,
+  HiddenUpMd,
+  HiddenDownMd
+} from '../../@components/@atoms';
 import { MobileWorkExperience } from './WorkExperience.mobile';
 import { DesktopWorkExperience } from './WorkExperience.desktop';
 
 export function WorkExperience({ appBarVariant }) {
   return (
-    <>
-      <MediaQuery query="(max-width: 767px)">
-        <MobileWorkExperience appBarVariant={appBarVariant} />
-      </MediaQuery>
+    <Section id="work-experience" appBarVariant={appBarVariant}>
+      <SectionTitle>Work Experience</SectionTitle>
 
-      <MediaQuery query="(min-width: 768px)">
+      <HiddenUpMd>
+        <MobileWorkExperience appBarVariant={appBarVariant} />
+      </HiddenUpMd>
+
+      <HiddenDownMd>
         <DesktopWorkExperience />
-      </MediaQuery>
-    </>
+      </HiddenDownMd>
+    </Section>
   );
 }

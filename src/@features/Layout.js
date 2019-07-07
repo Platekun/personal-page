@@ -1,23 +1,40 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
 import { css } from '@emotion/core';
 
 import { globalStyles } from '../@theme';
 import BackgroundImage from './background.svg';
+import { SEO } from '../@features';
 import { MobileNavigation, DesktopNavigation } from '../@components/@organisms';
 
 export function Layout(props) {
   return (
     <>
+      <SEO />
+
       {globalStyles}
 
-      <MediaQuery query="(max-width: 939px)">
+      <div
+        css={css`
+          @media screen and (min-width: 940px) {
+            display: none;
+          }
+        `}
+        query="(max-width: 939px)"
+      >
         <MobileNavigation />
-      </MediaQuery>
+      </div>
 
-      <MediaQuery query="(min-width: 940px)">
+      <div
+        css={css`
+          display: none;
+
+          @media screen and (min-width: 940px) {
+            display: block;
+          }
+        `}
+      >
         <DesktopNavigation />
-      </MediaQuery>
+      </div>
 
       <main
         css={css`

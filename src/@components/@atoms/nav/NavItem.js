@@ -1,25 +1,19 @@
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import { space } from '../../../@theme';
+import { space, COLORS } from '../../../@theme';
 
 export const ListItem = styled.li`
+  cursor: pointer;
+
+  &:hover {
+    color: ${COLORS.ACCENT};
+  }
+
   ${({ align, idx, size }) => {
     switch (align) {
       case 'vertical':
-        return `
-        margin: calc(${space(7)}px / 2) 0;
-        text-align: center;
-
-        ${
-          idx === 0
-            ? 'margin-top: 0;'
-            : idx === size - 1
-            ? 'margin-bottom: 0;'
-            : ''
-        };
-      `;
-
+        return `height: ${space(18)}px;`;
       case 'horizontal':
         return `
         margin: 0 calc(${space(7)}px / 2);
@@ -34,7 +28,7 @@ export const ListItem = styled.li`
       `;
 
       default:
-        throw new Error('Unsupported ListItem align type');
+        return '';
     }
   }}
 `;

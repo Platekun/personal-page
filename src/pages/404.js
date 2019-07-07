@@ -10,7 +10,7 @@ export default function NotFoundPage() {
     <>
       {globalStyles}
 
-      <SEO title="404: Not found" />
+      <SEO />
 
       <Section
         css={css`

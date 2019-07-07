@@ -1,19 +1,26 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
 
 import { DesktopHero } from './Hero.desktop';
 import { MobileHero } from './Hero.mobile';
+import { CoreValuesMobile } from './CoreValues.mobile';
+import { Hero, HiddenUpLg, HiddenDownLg } from '../../@components/@atoms';
 
-export function Hero({ appBarVariant }) {
+export function HeroComponent({ appBarVariant }) {
   return (
     <>
-      <MediaQuery maxWidth={939}>
-        <MobileHero appBarVariant={appBarVariant} />
-      </MediaQuery>
+      <Hero.SectionLayout id="top" appBarVariant={appBarVariant}>
+        <HiddenUpLg>
+          <MobileHero appBarVariant={appBarVariant} />
+        </HiddenUpLg>
 
-      <MediaQuery minWidth={940}>
-        <DesktopHero />
-      </MediaQuery>
+        <HiddenDownLg>
+          <DesktopHero />
+        </HiddenDownLg>
+      </Hero.SectionLayout>
+
+      <HiddenUpLg>
+        <CoreValuesMobile />
+      </HiddenUpLg>
     </>
   );
 }

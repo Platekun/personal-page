@@ -4,7 +4,7 @@ import cuid from 'cuid';
 
 import { NavigationDrawerContext } from '../@contexts';
 import { Nav, NavDrawer, HamburgerIcon, IconButton } from '../@atoms';
-import { LINKS } from '../../constants';
+import links from './links';
 
 export function NavigationDrawer() {
   const { current, closeDrawer } = React.useContext(NavigationDrawerContext);
@@ -20,16 +20,14 @@ export function NavigationDrawer() {
       </NavDrawer.HamburgerContainer>
 
       <Nav.List align="vertical">
-        {LINKS.map((link, idx) => (
+        {links.map((link, idx) => (
           <Nav.ListItem
             key={cuid()}
-            size={LINKS.length}
+            size={links.length}
             idx={idx}
             align="vertical"
           >
-            <Nav.Link href={link.url} onClick={closeDrawer}>
-              {link.label}
-            </Nav.Link>
+            <Nav.Link href={link.url}>{link.label}</Nav.Link>
           </Nav.ListItem>
         ))}
       </Nav.List>
@@ -38,13 +36,11 @@ export function NavigationDrawer() {
 
   return (
     <>
-      <NavDrawer.DrawerContainer visible={isVisible}>
-        {isVisible ? (
-          <ClickOutside onClickOut={closeDrawer}>{drawerContent}</ClickOutside>
-        ) : (
-          drawerContent
-        )}
-      </NavDrawer.DrawerContainer>
+      <ClickOutside onClickOut={isVisible ? closeDrawer : undefined}>
+        <NavDrawer.DrawerContainer visible={isVisible}>
+          {drawerContent}
+        </NavDrawer.DrawerContainer>
+      </ClickOutside>
 
       {isVisible && <NavDrawer.DrawerOverlay />}
     </>
