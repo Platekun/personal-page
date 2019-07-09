@@ -4,17 +4,19 @@ import {
   Contact,
   LinkedInIcon,
   GithubIcon,
-  TwitterIcon
+  TwitterIcon,
+  Parragraph
 } from '../../@components/@atoms';
+import styles from './ContactMe.module.css';
 
-export function ContactMe({ appBarVariant }) {
+export function ContactMe() {
   return (
-    <Contact.Section id="contact-me" appBarVariant={appBarVariant}>
+    <Contact.Section className={styles.contactMe}>
       <Contact.Title>Wanna contact me?</Contact.Title>
 
-      <Contact.Message>
+      <Parragraph className={styles.message}>
         Feel free to contact me using any of these methods
-      </Contact.Message>
+      </Parragraph>
 
       <Contact.List>
         <Contact.ListItem>

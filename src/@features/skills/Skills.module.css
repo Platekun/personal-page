@@ -1,0 +1,12 @@
+.skills .skillName {
+  max-width: calc(var(--space) * 86);
+  text-align: center;
+  margin-top: calc(var(--space) * 4);
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .skills .skillName {
+    margin-top: calc(var(--space) * 10);
+  }
+}

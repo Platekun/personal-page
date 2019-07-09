@@ -1,5 +1,6 @@
 import React from 'react';
 
+import styles from './Skills.module.css';
 import {
   Section,
   SectionTitle,
@@ -8,45 +9,52 @@ import {
   IdeaIcon,
   PaletteIcon,
   SmileIcon,
-  StarsIcon
+  StarsIcon,
+  Parragraph
 } from '../../@components/@atoms';
 
 export function WhatIDo({ appBarVariant }) {
   return (
-    <Section id="skills" appBarVariant={appBarVariant}>
+    <Section className={styles.skills}>
       <SectionTitle>What I do</SectionTitle>
 
       <ul>
         <Skills.Row>
           <Skills.Item>
             <SmileIcon />
-            <Skills.Name>Develop user facing features for web apps</Skills.Name>
+            <Parragraph className={styles.skillName}>
+              Develop user facing features for web apps
+            </Parragraph>
           </Skills.Item>
 
           <Skills.Item>
             <PaletteIcon />
-            <Skills.Name>Translate designs into code</Skills.Name>
+            <Parragraph className={styles.skillName}>
+              Translate designs into code
+            </Parragraph>
           </Skills.Item>
         </Skills.Row>
 
         <Skills.Item>
           <IdeaIcon />
-          <Skills.Name>Identify UI problems and possible solutions</Skills.Name>
+          <Parragraph className={styles.skillName}>
+            Identify UI problems and possible solutions
+          </Parragraph>
         </Skills.Item>
 
         <Skills.Row>
           <Skills.Item>
             <StarsIcon />
-            <Skills.Name>
+            <Parragraph className={styles.skillName}>
               Design, build and mantain high quality front-end code
-            </Skills.Name>
+            </Parragraph>
           </Skills.Item>
 
           <Skills.Item>
             <CellphoneIcon />
-            <Skills.Name>
+            <Parragraph className={styles.skillName}>
               Build UI cross-browser and multi-device functionalities
-            </Skills.Name>
+            </Parragraph>
           </Skills.Item>
         </Skills.Row>
       </ul>

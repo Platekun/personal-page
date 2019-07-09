@@ -1,0 +1,46 @@
+.parragraph {
+  line-height: 1.5;
+  margin-bottom: calc(var(--space) * 8);
+}
+
+@media screen and (min-width: 480px) {
+  .parragraph {
+    font-size: calc(var(--space) * 5);
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .parragraph {
+    font-size: calc(var(--space) * 6);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .parragraph {
+    font-size: calc(var(--space) * 7);
+  }
+}
+
+@media screen and (min-width: 2048px) {
+  .parragraph {
+    font-size: calc(var(--space) * 8);
+  }
+}
+
+@media screen and (min-height: 1024px) {
+  .parragraph {
+    font-size: calc(var(--space) * 7);
+  }
+}
+
+@media screen and (min-height: 1538px) {
+  .parragraph {
+    font-size: calc(var(--space) * 8);
+  }
+}
+
+@media screen and (min-height: 2028px) {
+  .parragraph {
+    font-size: calc(var(--space) * 9);
+  }
+}
