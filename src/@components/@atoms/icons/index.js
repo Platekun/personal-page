@@ -1,6 +1,5 @@
 export * from './LoveIcon';
 export * from './ScrollIcon';
-export * from './HamburgerIcon';
 export * from './IconButton';
 export * from './BookIcon';
 export * from './DumbellIcon';

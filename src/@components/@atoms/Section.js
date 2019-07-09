@@ -1,12 +1,8 @@
-import React from 'react';
-import Observer from '@researchgate/react-intersection-observer';
 import styled from '@emotion/styled';
-import useWindowSize from 'react-use/lib/useWindowSize';
 
 import { space, breakpoints } from '../../@theme';
-import { AppBarContext } from '../@contexts';
 
-const SectionLayout = styled.section`
+export const Section = styled.section`
   padding: ${space(8)}px;
   margin: 0 auto;
   max-width: 480px;
@@ -37,31 +33,3 @@ const SectionLayout = styled.section`
     padding-bottom: ${space(8)}px;
   }
 `;
-
-export function Section({ id, appBarVariant, ...rest }) {
-  const { setNormal, setInverted } = React.useContext(AppBarContext);
-  const { width } = useWindowSize();
-
-  function onObserverChange(event) {
-    const shouldUpdateHash =
-      event.isIntersecting && window.location.hash !== id;
-    if (shouldUpdateHash) {
-      window.history.replaceState(null, null, `#${id}`);
-      if (width < 940) {
-        if (appBarVariant === 'normal') {
-          setNormal();
-        } else if (appBarVariant === 'inverted') {
-          setInverted();
-        }
-      }
-    }
-  }
-
-  return id ? (
-    <Observer onChange={onObserverChange} threshold={[0.5]}>
-      <SectionLayout id={id} {...rest} />
-    </Observer>
-  ) : (
-    <SectionLayout {...rest} />
-  );
-}
