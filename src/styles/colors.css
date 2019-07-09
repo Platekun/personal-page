@@ -1,0 +1,8 @@
+:root {
+  --brand: #fb3455;
+  --accent: #6b34fb;
+  --darkness: #16161d;
+  --opaque: rgba(255, 255, 255, 0.5);
+  --gray: #fef;
+  --white: white;
+}

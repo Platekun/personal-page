@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'NeuzeitGro';
+  src: url('./NeuzeitGro.ttf') format('ttf');
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+p,
+q,
+blockquote,
+address,
+i,
+u,
+strike,
+tt,
+small,
+center,
+em,
+strong {
+  font-family: var(--font-family);
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+@media screen and (min-width: 940px) {
+  main {
+    padding-top: 60px;
+  }
+}

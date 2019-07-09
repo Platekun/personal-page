@@ -1,30 +1,17 @@
 import React from 'react';
-import { css } from '@emotion/core';
 
-import { globalStyles } from '../@theme';
+import styles from './404.module.css';
+
 import { SEO } from '../@features';
 import { Section, SectionTitle, Parragraph, Link } from '../@components/@atoms';
 
-export default function NotFoundPage() {
+export default function NotFound() {
   return (
     <>
-      {globalStyles}
-
       <SEO />
 
-      <Section
-        css={css`
-          height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        `}
-      >
-        <div
-          css={css`
-            text-align: center;
-          `}
-        >
+      <Section className={styles.notFound}>
+        <div className={styles.notFoundContent}>
           <SectionTitle>
             Page not found{' '}
             <span role="img" aria-label="Sad emoji">
