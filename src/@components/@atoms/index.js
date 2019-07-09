@@ -8,7 +8,6 @@ import * as Contact from './contact-me';
 export * from './icons';
 export * from './logos';
 export { Hero, AboutMe, WorkExperience, Skills, Tools, Contact };
-export * from './Wrapper';
 export * from './FullHeightSection';
 export * from './Important';
 export * from './Section';
