@@ -1,0 +1,41 @@
+.section {
+  padding: calc(var(--space) * 8);
+  margin: 0 auto;
+  max-width: 480px;
+  position: relative;
+}
+
+@media screen and (min-width: 480px) {
+  .section {
+    padding: calc(var(--space) * 8) calc(var(--space) * 12);
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: calc(var(--space) * 8) calc(var(--space) * 16);
+    max-width: 940px;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .section {
+    max-width: 1264px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    padding-top: calc(var(--space) * 11);
+    padding-right: calc(var(--space) * 22);
+    padding-left: calc(var(--space) * 22);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-height: 1024px) {
+  .section {
+    padding-top: calc(var(--space) * 8);
+    padding-bottom: calc(var(--space) * 8);
+  }
+}
