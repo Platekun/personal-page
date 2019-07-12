@@ -3,24 +3,24 @@ import React from 'react';
 import { DesktopHero } from './Hero.desktop';
 import { MobileHero } from './Hero.mobile';
 import { CoreValuesMobile } from './CoreValues.mobile';
-import { Hero, HiddenUpLg, HiddenDownLg } from '../../@components/@atoms';
+import { Hero, Hidden } from '../../@components/@atoms';
 
 export function HeroComponent({ appBarVariant }) {
   return (
     <>
       <Hero.SectionLayout id="top" appBarVariant={appBarVariant}>
-        <HiddenUpLg>
+        <Hidden type="up" bp="lg">
           <MobileHero appBarVariant={appBarVariant} />
-        </HiddenUpLg>
+        </Hidden>
 
-        <HiddenDownLg>
+        <Hidden type="down" bp="lg">
           <DesktopHero />
-        </HiddenDownLg>
+        </Hidden>
       </Hero.SectionLayout>
 
-      <HiddenUpLg>
+      <Hidden type="up" bp="lg">
         <CoreValuesMobile />
-      </HiddenUpLg>
+      </Hidden>
     </>
   );
 }

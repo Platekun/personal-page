@@ -1,0 +1,39 @@
+.hiddenUpMd {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .hiddenUpMd {
+    display: none;
+  }
+}
+
+.hiddenDownMd {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hiddenDownMd {
+    display: block;
+  }
+}
+
+.hiddenUpLg {
+  display: block;
+}
+
+@media screen and (min-width: 940px) {
+  .hiddenUpLg {
+    display: none;
+  }
+}
+
+.hiddenDownLg {
+  display: none;
+}
+
+@media screen and (min-width: 940px) {
+  .hiddenDownLg {
+    display: block;
+  }
+}

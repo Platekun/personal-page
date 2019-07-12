@@ -1,11 +1,6 @@
 import React from 'react';
 
-import {
-  Section,
-  SectionTitle,
-  HiddenUpMd,
-  HiddenDownMd
-} from '../../@components/@atoms';
+import { Section, SectionTitle, Hidden } from '../../@components/@atoms';
 import { MobileWorkExperience } from './WorkExperience.mobile';
 import { DesktopWorkExperience } from './WorkExperience.desktop';
 
@@ -14,13 +9,13 @@ export function WorkExperience({ appBarVariant }) {
     <Section id="work-experience" appBarVariant={appBarVariant}>
       <SectionTitle>Work Experience</SectionTitle>
 
-      <HiddenUpMd>
+      <Hidden type="up" bp="md">
         <MobileWorkExperience appBarVariant={appBarVariant} />
-      </HiddenUpMd>
+      </Hidden>
 
-      <HiddenDownMd>
+      <Hidden type="down" bp="md">
         <DesktopWorkExperience />
-      </HiddenDownMd>
+      </Hidden>
     </Section>
   );
 }
