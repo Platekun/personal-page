@@ -1,0 +1,97 @@
+.aboutMe {
+  --bookIcon-max-width: 32px;
+  --dumbellIcon-max-width: 64px;
+  --headphonesIcon-max-width: 40px;
+  --joystickIcon-max-width: 40px;
+}
+
+.aboutMe .hobbies {
+  --vertical-margin: calc(var(--space) * 8);
+
+  width: 100%;
+  margin: var(--vertical-margin) auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: calc(var(--space) * 10);
+}
+
+.aboutMe .hobby {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutMe .bookIcon {
+  height: 80px;
+  max-width: var(--bookIcon-max-width);
+}
+
+.aboutMe .dumbellIcon {
+  height: 80px;
+  max-width: var(--dumbellIcon-max-width);
+}
+
+.aboutMe .headphonesIcon {
+  height: 80px;
+  max-width: var(--headphonesIcon-max-width);
+}
+
+.aboutMe .joystickIcon {
+  height: 80px;
+  max-width: var(--joystickIcon-max-width);
+}
+
+@media screen and (min-width: 480px) {
+  .aboutMe .hobbies {
+    max-width: 490px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .aboutMe .bookIcon {
+    --bookIcon-max-width: calc(64px / 1.5);
+  }
+
+  .aboutMe .dumbellIcon {
+    --dumbellIcon-max-width: calc(132px / 1.5);
+  }
+
+  .aboutMe .headphonesIcon {
+    --headphonesIcon-max-width: calc(96px / 1.5);
+  }
+
+  .aboutMe .joystickIcon {
+    --joystickIcon-max-width: calc(80px / 1.5);
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .aboutMe .dumbellIcon {
+    --dumbellIcon-max-width: calc(132px / 1.2);
+  }
+
+  .aboutMe .headphonesIcon {
+    --headphonesIcon-max-width: calc(96px / 1.2);
+  }
+
+  .aboutMe .joystickIcon {
+    --joystickIcon-max-width: calc(80px / 1.2);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .aboutMe .bookIcon {
+    --bookIcon-max-width: 66px;
+  }
+
+  .aboutMe .dumbellIcon {
+    --dumbellIcon-max-width: 129px;
+  }
+
+  .aboutMe .headphonesIcon {
+    --headphonesIcon-max-width: 96px;
+  }
+
+  .aboutMe .joystickIcon {
+    --joystickIcon-max-width: 80px;
+  }
+}

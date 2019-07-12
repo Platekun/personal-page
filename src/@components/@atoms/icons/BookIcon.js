@@ -2,13 +2,7 @@ import React from 'react';
 
 export function BookIcon(props) {
   return (
-    <svg
-      width="66"
-      height="80"
-      viewBox="0 0 66 80"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+    <svg viewBox="0 0 66 80" xmlns="http://www.w3.org/2000/svg" {...props}>
       <g id="Personal-Page" fill="none" fillRule="evenodd">
         <g id="About-Desktop" transform="translate(-461 -608)" fill="#6B34FB">
           <g id="Hobbies" transform="translate(461 608)">

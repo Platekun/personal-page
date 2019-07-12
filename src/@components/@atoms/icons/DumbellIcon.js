@@ -2,13 +2,7 @@ import React from 'react';
 
 export function DumbellIcon(props) {
   return (
-    <svg
-      width="129"
-      height="80"
-      viewBox="0 0 129 80"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+    <svg viewBox="0 0 129 80" xmlns="http://www.w3.org/2000/svg" {...props}>
       <g id="Personal-Page" fill="none" fillRule="evenodd">
         <g
           id="About-Desktop"

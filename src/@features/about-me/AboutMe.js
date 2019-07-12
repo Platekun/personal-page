@@ -1,16 +1,22 @@
 import React from 'react';
 
+import styles from './AboutMe.module.css';
 import {
   Section,
   SectionTitle,
   Parragraph,
-  Important,
-  AboutMe
+  Important
+} from '../../@components/@atoms';
+import {
+  BookIcon,
+  DumbellIcon,
+  HeadphonesIcon,
+  JoystickIcon
 } from '../../@components/@atoms';
 
 export function AboutMeSection({ appBarVariant }) {
   return (
-    <Section id="about-me" appBarVariant={appBarVariant}>
+    <Section className={styles.aboutMe} appBarVariant={appBarVariant}>
       <SectionTitle>Who am I?</SectionTitle>
 
       <article>
@@ -31,13 +37,20 @@ export function AboutMeSection({ appBarVariant }) {
           have got to help people.
         </Parragraph>
 
-        <AboutMe.Hobbies>
-          <AboutMe.BookIcon />
-          <AboutMe.DumbellIcon />
-
-          <AboutMe.JoystickIcon />
-          <AboutMe.HeadphonesIcon />
-        </AboutMe.Hobbies>
+        <ul className={styles.hobbies}>
+          <li className={styles.hobby}>
+            <BookIcon className={styles.bookIcon} />
+          </li>
+          <li className={styles.hobby}>
+            <DumbellIcon className={styles.dumbellIcon} />
+          </li>
+          <li className={styles.hobby}>
+            <JoystickIcon className={styles.joystickIcon} />
+          </li>
+          <li className={styles.hobby}>
+            <HeadphonesIcon className={styles.headphonesIcon} />
+          </li>
+        </ul>
 
         <Parragraph marginBottom={0}>
           I am always hungry for knowledge, you will always see me reading and
