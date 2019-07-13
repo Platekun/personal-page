@@ -3,8 +3,62 @@
   margin-bottom: calc(var(--space) * 11);
 }
 
+.contactMe .list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: calc(var(--space) * 13);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.contactMe .listItem {
+  display: flex;
+  justify-content: center;
+}
+
+.contactMe svg {
+  max-width: 73px;
+}
+
 @media screen and (min-width: 480px) {
+  .contactMe {
+    height: 300px;
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
   .contactMe .message {
     display: none;
+  }
+
+  .contactMe .list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: calc(var(--space) * 17);
+    grid-row-gap: unset;
+    max-width: 509px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .contactMe .listItem {
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contactMe {
+    height: 600px;
+    min-height: 50vh;
+  }
+
+  .contactMe .title {
+    margin-bottom: calc(var(--space) * 20);
+  }
+
+  .contactMe svg {
+    max-width: unset;
   }
 }
