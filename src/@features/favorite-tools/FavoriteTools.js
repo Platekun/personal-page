@@ -1,65 +1,68 @@
 import React from 'react';
 
+import styles from './FavoriteTools.module.css';
+
 import {
+  Section,
+  SectionTitle,
   HTML5Icon,
   CSS3Icon,
   TypeScriptIcon,
   NodejsIcon,
   SketchIcon,
-  ReactIcon,
-  Tools
+  ReactIcon
 } from '../../@components/@atoms';
 
-export function FavoriteTools({ appBarVariant }) {
+export function FavoriteTools() {
   return (
-    <Tools.Section id="tools" appBarVariant={appBarVariant}>
-      <Tools.SectionContent>
-        <Tools.Title>Favorite Tools</Tools.Title>
+    <Section className={styles.favoriteTools}>
+      <div className={styles.content}>
+        <SectionTitle className={styles.title}>Favorite Tools</SectionTitle>
 
-        <Tools.List>
-          <Tools.ListItem>
+        <ul className={styles.list}>
+          <li className={styles.listItem}>
             <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">
               <HTML5Icon />
             </a>
             <h3 hidden>HTML5</h3>
-          </Tools.ListItem>
+          </li>
 
-          <Tools.ListItem>
+          <li className={styles.listItem}>
             <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">
               <CSS3Icon />
             </a>
             <h3 hidden>CSS3</h3>
-          </Tools.ListItem>
+          </li>
 
-          <Tools.ListItem>
+          <li className={styles.listItem}>
             <a href="https://reactjs.org/">
               <ReactIcon />
             </a>
             <h3 hidden>React.js</h3>
-          </Tools.ListItem>
+          </li>
 
-          <Tools.ListItem>
+          <li className={styles.listItem}>
             <a href="https://www.sketch.com/">
               <SketchIcon />
             </a>
             <h3 hidden>Sketch</h3>
-          </Tools.ListItem>
+          </li>
 
-          <Tools.ListItem>
+          <li className={styles.listItem}>
             <a href="https://www.typescriptlang.org/">
               <TypeScriptIcon />
             </a>
             <h3 hidden>TypeScript</h3>
-          </Tools.ListItem>
+          </li>
 
-          <Tools.ListItemWithLargeLogo>
+          <li className={styles.listItemLarge}>
             <a href="https://nodejs.org">
               <NodejsIcon />
             </a>
             <h3 hidden>Node.js</h3>
-          </Tools.ListItemWithLargeLogo>
-        </Tools.List>
-      </Tools.SectionContent>
-    </Tools.Section>
+          </li>
+        </ul>
+      </div>
+    </Section>
   );
 }
