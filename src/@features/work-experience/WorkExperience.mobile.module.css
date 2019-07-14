@@ -1,0 +1,20 @@
+.workExperience .divider {
+  width: 5px;
+  height: 75px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--brand);
+  margin-top: calc(var(--space) * 4);
+  margin-bottom: calc(var(--space) * 4);
+  margin-right: auto;
+  margin-left: auto;
+  position: static;
+  top: unset;
+  transform: rotate(180deg);
+}
+
+.workExperience .presentDivider {
+  height: 90px;
+  position: relative;
+  top: calc(var(--space) * 4);
+}

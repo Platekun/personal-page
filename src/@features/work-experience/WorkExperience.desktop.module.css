@@ -1,0 +1,33 @@
+.workExperience .timeSegment {
+  width: 5px;
+  background-color: var(--brand);
+  height: 100%;
+}
+
+.workExperience .firstTimeSegment {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.workExperience .presentTimeSegment {
+  height: 50%;
+  position: relative;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  bottom: 50px;
+}
+
+.workExperience .timelineEvent {
+  width: 5px;
+  height: 65px;
+  background-color: var(--brand);
+  transform: rotate(270deg);
+  position: relative;
+  top: 65%;
+  border-radius: 5px;
+}
+
+.workExperience .pastTimelineEvent {
+  top: 30%;
+  opacity: 0.1;
+}

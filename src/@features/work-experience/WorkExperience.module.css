@@ -1,0 +1,108 @@
+.workExperience .jobs {
+  max-width: calc(var(--space) * 198);
+  margin: 0 auto;
+}
+
+.workExperience .past {
+  opacity: 0.4;
+}
+
+.workExperience .experienceEntry {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.workExperience .experienceEntry svg {
+  width: 80%;
+}
+
+.workExperience .pastLogo {
+  filter: grayscale(100%);
+  opacity: 0.4;
+  max-width: 355px;
+}
+
+.workExperience .companyLogoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workExperience .experienceDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: calc(var(--space) * 5);
+}
+
+.workExperience .currentJob {
+  width: 166px;
+  height: 166px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 5px solid var(--brand);
+}
+
+.workExperience .currentJob svg {
+  width: calc(var(--space) * 24);
+}
+
+.workExperience .jobTitle {
+  --font-size: calc(var(--space) * 5);
+
+  font-size: var(--font-size);
+  margin-bottom: calc(var(--space) * 3);
+}
+
+.workExperience .employmentPeriod {
+  --font-size: calc(var(--space) * 4);
+
+  display: block;
+  font-size: var(--font-size);
+  font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  .workExperience .experienceEntry {
+    height: calc(var(--space) * 50);
+    display: grid;
+    grid-template-columns: 1fr 5px 1fr;
+    grid-column-gap: calc(var(--space) * 8);
+  }
+
+  .workExperience .experienceEntry svg {
+    width: 100%;
+  }
+
+  .workExperience .companyLogoContainer {
+    --max-width: calc(var(--space) * 68);
+
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .workExperience .companyLogoContainer {
+    --max-width: calc(var(--space) * 83);
+  }
+
+  .workExperience .experienceDetails {
+    margin-top: unset;
+  }
+
+  .workExperience .jobTitle {
+    --font-size: calc(var(--space) * 7);
+  }
+
+  .workExperience .employmentPeriod {
+    --font-size: calc(var(--space) * 6);
+  }
+}
