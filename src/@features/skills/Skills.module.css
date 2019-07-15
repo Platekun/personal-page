@@ -1,12 +1,41 @@
+.skills .list {
+  --row-gap: calc(var(--space) * 8);
+
+  display: grid;
+  grid-row-gap: var(--row-gap);
+}
+
+.skills .skill {
+  display: grid;
+  grid-row-gap: calc(var(--space) * 4);
+  justify-items: center;
+}
+
+.skills .skill svg {
+  --svg-max-width: 70px;
+
+  max-width: var(--svg-max-width);
+  height: unset;
+}
+
 .skills .skillName {
   max-width: calc(var(--space) * 86);
   text-align: center;
-  margin-top: calc(var(--space) * 4);
-  margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
-  .skills .skillName {
-    margin-top: calc(var(--space) * 10);
+  .skills .list {
+    --row-gap: calc(var(--space) * 12);
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .skills .wideSkill {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .skills .skill svg {
+    --svg-max-width: unset;
   }
 }

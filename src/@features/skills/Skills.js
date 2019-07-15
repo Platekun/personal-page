@@ -1,10 +1,10 @@
 import React from 'react';
+import clsx from 'clsx';
 
 import styles from './Skills.module.css';
 import {
   Section,
   SectionTitle,
-  Skills,
   CellphoneIcon,
   IdeaIcon,
   PaletteIcon,
@@ -13,50 +13,46 @@ import {
   Parragraph
 } from '../../@components/@atoms';
 
-export function WhatIDo({ appBarVariant }) {
+export function WhatIDo() {
   return (
     <Section className={styles.skills}>
       <SectionTitle>What I do</SectionTitle>
 
-      <ul>
-        <Skills.Row>
-          <Skills.Item>
-            <SmileIcon />
-            <Parragraph className={styles.skillName}>
-              Develop user facing features for web apps
-            </Parragraph>
-          </Skills.Item>
+      <ul className={styles.list}>
+        <li className={styles.skill}>
+          <SmileIcon />
+          <Parragraph className={styles.skillName}>
+            Develop user facing features for web apps
+          </Parragraph>
+        </li>
 
-          <Skills.Item>
-            <PaletteIcon />
-            <Parragraph className={styles.skillName}>
-              Translate designs into code
-            </Parragraph>
-          </Skills.Item>
-        </Skills.Row>
+        <li className={styles.skill}>
+          <PaletteIcon />
+          <Parragraph className={styles.skillName}>
+            Translate designs into code
+          </Parragraph>
+        </li>
 
-        <Skills.Item>
+        <li className={clsx([styles.skill, styles.wideSkill])}>
           <IdeaIcon />
           <Parragraph className={styles.skillName}>
             Identify UI problems and possible solutions
           </Parragraph>
-        </Skills.Item>
+        </li>
 
-        <Skills.Row>
-          <Skills.Item>
-            <StarsIcon />
-            <Parragraph className={styles.skillName}>
-              Design, build and mantain high quality front-end code
-            </Parragraph>
-          </Skills.Item>
+        <li className={styles.skill}>
+          <StarsIcon />
+          <Parragraph className={styles.skillName}>
+            Design, build and mantain high quality front-end code
+          </Parragraph>
+        </li>
 
-          <Skills.Item>
-            <CellphoneIcon />
-            <Parragraph className={styles.skillName}>
-              Build UI cross-browser and multi-device functionalities
-            </Parragraph>
-          </Skills.Item>
-        </Skills.Row>
+        <li className={styles.skill}>
+          <CellphoneIcon />
+          <Parragraph className={styles.skillName}>
+            Build UI cross-browser and multi-device functionalities
+          </Parragraph>
+        </li>
       </ul>
     </Section>
   );
